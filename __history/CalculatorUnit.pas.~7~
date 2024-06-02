@@ -1,0 +1,129 @@
+unit CalculatorUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TCalculatorForm = class(TForm)
+    // Num1, Num2 and Result edits with Labels
+    ResultEdt: TEdit;
+    InputEdt1: TEdit;
+    InputEdt2: TEdit;
+    Char1Lbl: TLabel;
+    Char2Lbl: TLabel;
+    // Digit Buttons 0, 1, 2, ... 9
+    Button0: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Button9: TButton;
+    // Arifmetic operator buttons
+    ButtonPlus: TButton;
+    ButtonMinus: TButton;
+    ButtonMultiply: TButton;
+    ButtonDivide: TButton;
+    // Dot button for float numbers
+    ButtonDot: TButton;
+    // Other Equals, Clear, Backspace Buttons
+    ButtonClear: TButton;
+    ButtonBackspace: TButton;
+    ButtonEquals: TButton;
+
+    procedure ButtonDigitClick(Sender: TObject);
+    procedure ActiveEdtClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure ButtonOperatorClick(Sender: TObject);
+    procedure ButtonEqualsClick(Sender: TObject);
+    procedure ButtonClearClick(Sender: TObject);
+
+  private
+    { Private declarations }
+    FOperand1: Double;
+    FOperator: Char;
+    FOperand2: Double;
+    FWaitingForOperand2: Boolean;
+    ActiveEdt: TEdit;
+  public
+    { Public declarations }
+  end;
+
+var
+  CalculatorForm: TCalculatorForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TCalculatorForm.ButtonDigitClick(Sender: TObject);
+begin
+  // Append the clicked digit to the InputEdt
+  ActiveEdt.Text := ActiveEdt.Text + TButton(Sender).Caption;
+end;
+
+procedure TCalculatorForm.FormCreate(Sender: TObject);
+begin
+  ActiveControl := InputEdt1;
+  ActiveEdt := InputEdt1;
+end;
+
+procedure TCalculatorForm.ActiveEdtClick(Sender: TObject);
+begin
+  // redeclaring the ActiveEdt var, find active InputEdt
+  ActiveEdt := TEdit(Sender);
+end;
+
+procedure TCalculatorForm.ButtonOperatorClick(Sender: TObject);
+begin
+  FOperator := TButton(Sender).Caption[1];
+  FOperand1 := StrToFloat(InputEdt1.Text);
+  FWaitingForOperand2 := True;
+
+  ResultEdt.Text := '';
+  Char1Lbl.Caption := FOperator;
+end;
+
+procedure TCalculatorForm.ButtonEqualsClick(Sender: TObject);
+begin
+  if FWaitingForOperand2 then
+  begin
+    FOperand2 := StrToFloat(InputEdt2.Text);
+    case FOperator of
+      '+': ResultEdt.Text := FloatToStr(FOperand1 + FOperand2);
+      '-': ResultEdt.Text := FloatToStr(FOperand1 - FOperand2);
+      '*': ResultEdt.Text := FloatToStr(FOperand1 * FOperand2);
+      '/': ResultEdt.Text := FloatToStr(FOperand1 / FOperand2);
+    end;
+    FWaitingForOperand2 := False;
+  end;
+end;
+
+procedure TCalculatorForm.ButtonClearClick(Sender: TObject);
+begin
+
+//  if (InputEdt1.Text <> '') and (InputEdt1.Text <> '') then ButtonClear.Caption := 'AC';
+
+
+// OnChange procedure
+  if (InputEdt1.Text <> '') and (InputEdt2.Text <> '') then
+    ButtonClear.Caption := 'AC';
+    InputEdt1.Text := ''; InputEdt2.Text := '';
+
+
+
+
+//  ActiveEdt.Text := '';
+//
+  InputEdt1.Text := '';
+  InputEdt2.Text := '';
+
+end;
+
+end.

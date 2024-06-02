@@ -1,0 +1,272 @@
+object CalculatorForm: TCalculatorForm
+  Left = 0
+  Top = 0
+  Caption = 'CalculatorForm'
+  ClientHeight = 281
+  ClientWidth = 423
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnCreate = FormCreate
+  TextHeight = 15
+  object Char1Lbl: TLabel
+    Left = 28
+    Top = 52
+    Width = 4
+    Height = 17
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Char2Lbl: TLabel
+    Left = 28
+    Top = 104
+    Width = 9
+    Height = 17
+    Caption = '='
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object ResultEdt: TEdit
+    Left = 24
+    Top = 127
+    Width = 145
+    Height = 29
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ImeName = 'Russian'
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object InputEdt1: TEdit
+    Left = 24
+    Top = 23
+    Width = 145
+    Height = 23
+    ImeName = 'InputEdt1'
+    ReadOnly = True
+    TabOrder = 1
+    OnClick = ActiveEdtClick
+  end
+  object InputEdt2: TEdit
+    Left = 24
+    Top = 75
+    Width = 145
+    Height = 23
+    ImeName = 'Russian'
+    ReadOnly = True
+    TabOrder = 2
+    OnClick = ActiveEdtClick
+  end
+  object Button7: TButton
+    AlignWithMargins = True
+    Left = 211
+    Top = 70
+    Width = 41
+    Height = 41
+    Caption = '7'
+    DisabledImageName = 'Button7'
+    TabOrder = 3
+    OnClick = ButtonDigitClick
+  end
+  object Button8: TButton
+    AlignWithMargins = True
+    Left = 258
+    Top = 70
+    Width = 41
+    Height = 41
+    Caption = '8'
+    DisabledImageName = 'Button8'
+    TabOrder = 4
+    OnClick = ButtonDigitClick
+  end
+  object Button9: TButton
+    AlignWithMargins = True
+    Left = 305
+    Top = 70
+    Width = 41
+    Height = 41
+    Caption = '9'
+    DisabledImageName = 'Button9'
+    TabOrder = 5
+    OnClick = ButtonDigitClick
+  end
+  object Button6: TButton
+    AlignWithMargins = True
+    Left = 305
+    Top = 117
+    Width = 41
+    Height = 41
+    Caption = '6'
+    DisabledImageName = 'Button6'
+    TabOrder = 6
+    OnClick = ButtonDigitClick
+  end
+  object Button5: TButton
+    AlignWithMargins = True
+    Left = 258
+    Top = 117
+    Width = 41
+    Height = 41
+    Caption = '5'
+    TabOrder = 7
+    OnClick = ButtonDigitClick
+  end
+  object Button4: TButton
+    AlignWithMargins = True
+    Left = 211
+    Top = 117
+    Width = 41
+    Height = 41
+    Caption = '4'
+    DisabledImageName = 'Button4'
+    TabOrder = 8
+    OnClick = ButtonDigitClick
+  end
+  object Button1: TButton
+    AlignWithMargins = True
+    Left = 305
+    Top = 164
+    Width = 41
+    Height = 41
+    Caption = '1'
+    DisabledImageName = 'Button1'
+    TabOrder = 9
+    OnClick = ButtonDigitClick
+  end
+  object Button2: TButton
+    AlignWithMargins = True
+    Left = 258
+    Top = 164
+    Width = 41
+    Height = 41
+    Caption = '2'
+    DisabledImageName = 'Button2'
+    TabOrder = 10
+    OnClick = ButtonDigitClick
+  end
+  object Button3: TButton
+    AlignWithMargins = True
+    Left = 211
+    Top = 164
+    Width = 41
+    Height = 41
+    Caption = '3'
+    DisabledImageName = 'Button3'
+    TabOrder = 11
+    OnClick = ButtonDigitClick
+  end
+  object Button0: TButton
+    AlignWithMargins = True
+    Left = 211
+    Top = 211
+    Width = 88
+    Height = 41
+    Caption = '0'
+    DisabledImageName = 'Button0'
+    TabOrder = 12
+    OnClick = ButtonDigitClick
+  end
+  object ButtonDot: TButton
+    AlignWithMargins = True
+    Left = 305
+    Top = 211
+    Width = 41
+    Height = 41
+    Caption = ','
+    DisabledImageName = 'ButtonDot'
+    Enabled = False
+    TabOrder = 13
+  end
+  object ButtonClear: TButton
+    AlignWithMargins = True
+    Left = 352
+    Top = 117
+    Width = 41
+    Height = 41
+    Caption = 'C'
+    DisabledImageName = 'ButtonClear'
+    TabOrder = 14
+    OnClick = ButtonClearClick
+  end
+  object ButtonEquals: TButton
+    AlignWithMargins = True
+    Left = 352
+    Top = 164
+    Width = 41
+    Height = 88
+    Caption = '='
+    DisabledImageName = 'ButtonEquals'
+    TabOrder = 15
+    OnClick = ButtonEqualsClick
+  end
+  object ButtonBackspace: TButton
+    AlignWithMargins = True
+    Left = 352
+    Top = 70
+    Width = 41
+    Height = 41
+    Caption = #8592
+    DisabledImageName = 'ButtonBackspace'
+    Enabled = False
+    TabOrder = 16
+  end
+  object ButtonPlus: TButton
+    AlignWithMargins = True
+    Left = 211
+    Top = 23
+    Width = 41
+    Height = 41
+    Caption = '+'
+    DisabledImageName = 'ButtonPlus'
+    TabOrder = 17
+    OnClick = ButtonOperatorClick
+  end
+  object ButtonMinus: TButton
+    AlignWithMargins = True
+    Left = 258
+    Top = 23
+    Width = 41
+    Height = 41
+    Caption = '-'
+    DisabledImageName = 'ButtonMinus'
+    TabOrder = 18
+    OnClick = ButtonOperatorClick
+  end
+  object ButtonMultiply: TButton
+    AlignWithMargins = True
+    Left = 305
+    Top = 23
+    Width = 41
+    Height = 41
+    Caption = '*'
+    DisabledImageName = 'ButtonMultiply'
+    TabOrder = 19
+    OnClick = ButtonOperatorClick
+  end
+  object ButtonDivide: TButton
+    AlignWithMargins = True
+    Left = 352
+    Top = 23
+    Width = 41
+    Height = 41
+    Caption = '/'
+    DisabledImageName = 'ButtonDivide'
+    TabOrder = 20
+    OnClick = ButtonOperatorClick
+  end
+end

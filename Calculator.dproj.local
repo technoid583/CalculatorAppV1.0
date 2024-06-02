@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/16 20:25:51.000.756,=C:\Users\Abdulloh-PC\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/29 16:18:41.000.507,=C:\Users\Abdulloh-PC\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/30 01:09:03.000.767,C:\Users\Abdulloh-PC\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas=D:\01 Coding\Delphi\CalculatorAppV1.0\CalculatorForm.pas</Transaction>
+    <Transaction>2024/03/30 01:09:03.000.767,C:\Users\Abdulloh-PC\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm=D:\01 Coding\Delphi\CalculatorAppV1.0\CalculatorForm.dfm</Transaction>
+    <Transaction>2024/03/30 01:09:15.000.897,C:\Users\Abdulloh-PC\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj=D:\01 Coding\Delphi\CalculatorAppV1.0\Calculator.dproj</Transaction>
+    <Transaction>2024/03/30 01:11:40.000.092,=D:\01 Coding\Delphi\CalculatorAppV1.0\Unit1.pas</Transaction>
+    <Transaction>2024/03/30 01:17:41.000.838,D:\01 Coding\Delphi\CalculatorAppV1.0\CalculatorForm.pas=D:\01 Coding\Delphi\CalculatorAppV1.0\CalculatorUnit.pas</Transaction>
+    <Transaction>2024/03/30 01:17:41.000.838,D:\01 Coding\Delphi\CalculatorAppV1.0\CalculatorForm.dfm=D:\01 Coding\Delphi\CalculatorAppV1.0\CalculatorUnit.dfm</Transaction>
+    <Transaction>2024/03/30 12:47:08.000.847,=D:\01 Coding\Delphi\CalculatorAppV1.0\Calculator.todo</Transaction>
+  </Transactions>
+</BorlandProject>
